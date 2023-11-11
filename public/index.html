@@ -6,7 +6,7 @@
     <title>Desafio Imóvel Guide</title>
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/cardStyles.css" />
-    <script src="../scripts/script.js" async></script>
+    <script src="../scripts/script.js" async defer></script>
   </head>
   <body>
     <div class="header-container">
@@ -31,9 +31,65 @@
     <div class="main-container">
       <main class="main">
         <div class="main-card"></div>
+        <div class="main-card">
+          <h1 class="title-cadastro">Mande uma mensagem:</h1>
+          <input
+            type="text"
+            class="input"
+            id="input-cpf"
+            placeholder="Digite seu CPF"
+            maxlength="11"
+            required
+          />
+          <br />
+          <input
+            type="text"
+            class="input"
+            id="input-telefone"
+            placeholder="Digite seu telefone"
+            maxlength="9"
+            required
+          />
+          <br />
+          <textarea
+            type="text"
+            class="input-mensagem"
+            id="input-mensagem"
+            placeholder="Digite o assunto"
+            maxlength="200"
+          ></textarea>
+          <input
+            type="button"
+            class="buttom-form"
+            id="enviar-form"
+            value="Enviar mensagem"
+            onclick="alert('Sua mensagem foi enviada com sucesso!')"
+          />
+        </div>
         <div class="main-card"></div>
-        <div class="main-card"></div>
-        <div class="main-card"></div>
+        <div class="main-card">
+          <img
+            class="imagem-modal"
+            src="../assets/imagem_casa.jpg"
+            alt="imagem-desafio-imovelguide"
+            onclick="abrirModal('../assets/imagem_casa.jpg')"
+            style="cursor: pointer"
+          />
+          <button
+            class="button-modal"
+            onclick="abrirModal('../assets/imagem_casa.jpg')"
+          >
+            Abrir imagem no modal
+          </button>
+          <div id="modal" class="modal">
+            <span class="fechar-modal" onclick="fecharModal()">&times;</span>
+            <img
+              class="modal-conteudo"
+              src="../assets/imagem_casa.jpg"
+              id="imagemModal"
+            />
+          </div>
+        </div>
         <div class="main-card"></div>
         <div class="main-card"></div>
       </main>
