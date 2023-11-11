@@ -20,23 +20,27 @@ body {
   place-items: space-between;
   margin-top: 0;
   max-width: 100vw;
-  height: 80px;
+  min-height: 80px;
   background-color: var(--cor-secundaria);
 }
 
 .logo-header {
   display: flex;
+  position: absolute;
   max-height: 80px;
   padding: 0 40px 0 40px;
 }
 
 .nav-left-header {
+  left: 250px;
+  position: relative;
+  height: 80px;
   display: flex;
   float: left;
 }
 
 .nav-right-header {
-  min-height: 80px;
+  height: 80px;
   display: flex;
   float: right;
 }
@@ -73,14 +77,15 @@ a {
 .main {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   max-width: 100vw;
   gap: 100px;
 }
 
 .main-card {
-  width: 440px;
-  height: 380px;
+  min-width: 440px;
+  min-height: 380px;
   border: 1px solid var(--cor-terciaria);
   border-radius: 8px;
   background-color: #ffffff;
@@ -106,7 +111,7 @@ a {
 .paragraph-footer {
   display: inline;
   position: absolute;
-  top: 10px;
+  top: 14px;
   right: 350px;
   color: #ffffff;
 }
@@ -122,6 +127,20 @@ a {
 @media (max-width: 767px) {
   body {
     font-size: 14px;
+  }
+  .logo-header {
+    top: 0;
+    display: flex;
+  }
+  .main {
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-left-header {
+    display: none;
+  }
+  .nav-right-header {
+    display: none;
   }
   .main-card {
     width: 340px;
@@ -153,8 +172,33 @@ a {
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1080px) {
   body {
     font-size: 18px;
+  }
+  .main {
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container {
+    padding: 50px 0 100px 0;
+  }
+  .nav-left-footer {
+    display: none;
+  }
+  .paragraph-footer {
+    top: 23px;
+    left: 50px;
+    font-size: 0.75rem;
+  }
+  .nav-left-header {
+    display: none;
+  }
+  .nav-right-header {
+    display: none;
+  }
+  .logo-header {
+    top: 0;
+    display: flex;
   }
 }
