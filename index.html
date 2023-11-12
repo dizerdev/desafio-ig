@@ -25,6 +25,22 @@
           <a href="#">Entrar</a>
           <button class="btn-header">Cadastre-se</button>
         </nav>
+        <nav class="menu-container" id="menu-container">
+          <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-list" id="nav-list">
+            <li><a href="#">Condomínios</a></li>
+            <li><a href="#">Fórum</a></li>
+            <li><a href="#">Guia</a></li>
+            <li><a href="#">Ferramentas</a></li>
+            <li><a href="#">Cotar imóvel</a></li>
+            <li><a href="#">Planos</a></li>
+            <li><a href="#">Entrar</a></li>
+          </ul>
+        </nav>
       </header>
     </div>
 
@@ -91,18 +107,62 @@
             />
           </form>
         </div>
-        <div class="main-card"></div>
+        <div class="main-card">
+          <form class="formulario-regra" action="">
+            <h1 class="title-cadastro">Regra de 3</h1>
+            <input
+              type="number"
+              class="input-regra"
+              id="input-divide"
+              placeholder="100"
+              maxlength="8"
+              required
+            />
+            <span class="span-regra">________</span>
+            <input
+              type="number"
+              class="input-regra"
+              id="input-multiplica1"
+              placeholder="60"
+              maxlength="8"
+              required
+            />
+            <input
+              type="number"
+              class="input-regra"
+              id="input-multiplica2"
+              placeholder="30"
+              maxlength="8"
+              required
+            />
+            <span class="span-regra">________</span>
+            <input
+              type="number"
+              class="input-regra"
+              id="input-resultado"
+              placeholder="Resultado"
+              maxlength="8"
+            />
+            <input
+              type="button"
+              class="buttom-form"
+              id="calcular"
+              value="Calcular"
+              onclick="calcularRegraDe3()"
+            />
+          </form>
+        </div>
         <div class="main-card">
           <img
             class="imagem-modal"
-            src="../assets/imagem_casa.jpg"
+            src="./assets/imagem_casa.jpg"
             alt="imagem-desafio-imovelguide"
-            onclick="abrirModal('../assets/imagem_casa.jpg')"
+            onclick="abrirModal('./assets/imagem_casa.jpg')"
             style="cursor: pointer"
           />
           <button
             class="button-modal"
-            onclick="abrirModal('../assets/imagem_casa.jpg')"
+            onclick="abrirModal('./assets/imagem_casa.jpg')"
           >
             Abrir imagem no modal
           </button>

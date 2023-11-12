@@ -74,6 +74,46 @@ a {
   background-color: var(--cor-primaria);
 }
 
+.menu-container {
+  float: right;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--cor-secundaria);
+  color: white;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: var(--cor-terciaria);
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+
 .main-container {
   background-color: #ffffff;
   padding: 90px 90px 120px 90px;
@@ -134,7 +174,89 @@ a {
   padding: 0 20px;
 }
 
-@media (max-width: 1188px) {
+@media (max-width: 1187px) {
+  .paragraph-footer {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    left: 40px;
+    right: 0;
+    font-size: 0.75rem;
+  }
+
+  .logo-footer {
+    max-height: 60px;
+    margin-right: 0;
+    padding: 0 20px;
+  }
+
+  .logo-header {
+    top: 0;
+    display: flex;
+    min-height: 60px;
+  }
+
+  .header-container {
+    height: 60px;
+  }
+
+  .footer-container {
+    height: 60px;
+  }
+
+  .nav-left-footer {
+    display: none;
+  }
+
+  .nav-left-header {
+    display: none;
+  }
+
+  .nav-right-header {
+    display: none;
+  }
+
+  .main {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-container {
+    padding: 40px 0 80px 0;
+  }
+  .menu-container {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 30%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--cor-terciaria);
+    z-index: 1;
+  }
+
+  .nav-list.show {
+    display: flex;
+    padding: 0;
+  }
+
+  .nav-list li {
+    justify-content: flex-start;
+  }
+  .nav-list li a {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1188px) {
   body {
     font-size: 18px;
   }
@@ -145,26 +267,9 @@ a {
   .main-container {
     padding: 40px 0 80px 0;
   }
-  .nav-left-footer {
-    display: none;
-  }
   .paragraph-footer {
     top: 23px;
     left: 50px;
     font-size: 0.75rem;
-  }
-  .nav-left-header {
-    display: none;
-  }
-  .nav-right-header {
-    display: none;
-  }
-  .logo-header {
-    top: 0;
-    display: flex;
-    min-height: 120px;
-  }
-  .header-container {
-    height: 120px;
   }
 }

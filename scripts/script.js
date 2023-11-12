@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function mostrarTelefone(elemento) {
   elemento.innerHTML = '(11) 99999-9999';
   elemento.style.textDecoration = 'none';
-  elemento.style.marginLeft = '75px';
+  elemento.style.marginLeft = '90px';
   elemento.style.color = '#fE6613';
   elemento.style.fontWeight = '500';
   elemento.style.cursor = 'auto';
@@ -99,3 +99,33 @@ document
     linkTemporario.click();
     document.body.removeChild(linkTemporario);
   });
+
+// codigo para calcular a regra de 3
+
+function calcularRegraDe3() {
+  const multiplica1 = parseInt(
+    document.getElementById('input-multiplica1').value
+  );
+  const multiplica2 = parseInt(
+    document.getElementById('input-multiplica2').value
+  );
+  const divide = parseInt(document.getElementById('input-divide').value);
+  const resultado = document.getElementById('input-resultado');
+  if (multiplica1 || multiplica2 || divide == NaN) {
+    resultado.value = (multiplica1 * multiplica2) / divide;
+  } else {
+    alert('É necessario que todos números estejam preenchidos');
+  }
+}
+
+// codigo para o menu hamburguer
+const mobileMenuButton = document.getElementById('mobile-menu');
+const navList = document.getElementById('nav-list');
+const menuContainer = document.getElementById('menu-container');
+mobileMenuButton.addEventListener('click', function () {
+  console.log('ola');
+  navList.classList.toggle('show');
+});
+navList.addEventListener('mousemove', function () {
+  navList.classList.remove('show');
+});
