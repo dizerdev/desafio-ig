@@ -167,12 +167,14 @@
             Abrir imagem no modal
           </button>
           <div id="modal" class="modal">
-            <span class="fechar-modal" onclick="fecharModal()">&times;</span>
-            <img
-              class="modal-conteudo"
-              src="../assets/imagem_casa.jpg"
-              id="imagemModal"
-            />
+            <div class="modal-container">
+              <span class="fechar-modal" onclick="fecharModal()">&times;</span>
+              <img
+                class="modal-conteudo"
+                src="../assets/imagem_casa.jpg"
+                id="imagemModal"
+              />
+            </div>
           </div>
         </div>
         <div class="main-card">
@@ -208,10 +210,16 @@
           <a href="#">Contatos</a>
           <a href="#">Sobre</a>
         </nav>
-        <p class="paragraph-footer">
-          © Copyright 2023. Todos os direitos reservados.
-        </p>
-        <img src="./assets/logo-imovel-guide.png" alt="" class="logo-footer" />
+        <div class="footer-right">
+          <p class="paragraph-footer">
+            © Copyright 2023. Todos os direitos reservados.
+          </p>
+          <img
+            src="./assets/logo-imovel-guide.png"
+            alt=""
+            class="logo-footer"
+          />
+        </div>
       </footer>
     </div>
   </body>

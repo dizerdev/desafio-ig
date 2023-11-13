@@ -73,14 +73,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   setTimeout(function () {
     img.style.transform = 'scale(1.5)';
-  }, 100);
+    img.style.transition = 'transform 3s ease-in-out';
+  }, 1000);
 });
 
 // codigo para mostrar telefone
 function mostrarTelefone(elemento) {
   elemento.innerHTML = '(11) 99999-9999';
   elemento.style.textDecoration = 'none';
-  elemento.style.marginLeft = '90px';
+  elemento.style.marginLeft = '115px';
   elemento.style.color = '#fE6613';
   elemento.style.fontWeight = '500';
   elemento.style.cursor = 'auto';
@@ -123,9 +124,8 @@ const mobileMenuButton = document.getElementById('mobile-menu');
 const navList = document.getElementById('nav-list');
 const menuContainer = document.getElementById('menu-container');
 mobileMenuButton.addEventListener('click', function () {
-  console.log('ola');
   navList.classList.toggle('show');
 });
-navList.addEventListener('mousemove', function () {
+navList.addEventListener('click', function () {
   navList.classList.remove('show');
 });
